@@ -1,5 +1,5 @@
 # API Repository
-Repository for apis for fun and study
+Repository forfun apis or study apis
 
 ## RUN
 
