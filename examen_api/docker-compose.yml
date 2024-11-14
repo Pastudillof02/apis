@@ -1,0 +1,18 @@
+services:
+  geocache_service:
+    build: ./services/geocache_service
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+    volumes:
+      - ./services/geocache_service:/app
+
+  logbook_service:
+    build: ./services/logbook_service
+    ports:
+      - "8001:8000"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+    volumes:
+      - ./services/logbook_service:/app
