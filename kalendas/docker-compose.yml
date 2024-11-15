@@ -1,0 +1,9 @@
+services:
+  usuario_service:
+    build: ./services/usuario_service
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+    volumes:
+      - ./services/usuario_service:/app
