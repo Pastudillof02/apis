@@ -1,0 +1,426 @@
+{
+	"info": {
+		"_postman_id": "a04d8ff0-1b3f-4179-8f31-11de72bd93ca",
+		"name": "kalendas_functions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "38845081"
+	},
+	"item": [
+		{
+			"name": "CRUD de usuarios",
+			"item": [
+				{
+					"name": "GET ALL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"lat\": 0.0,\r\n        \"lon\": 0.0,\r\n        \"image\": \"https://example.com/\",\r\n        \"hint\": \"example2\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/usuarios"
+					},
+					"response": []
+				},
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/usuarios/getById?id=67367729104921523d28f4b0",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"usuarios",
+								"getById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "67367729104921523d28f4b0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"user5@example.com\",\r\n  \"nombre\": \"user5\",\r\n  \"contactos\": [\"user2@example.com\",\"user2@example.com\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/usuarios"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/usuarios?id=67367737104921523d28f4b1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"usuarios"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "67367737104921523d28f4b1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"user@example.com\",\r\n  \"nombre\": \"user\",\r\n  \"contactos\": [\"user2@example.com\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/usuarios?id=673676e6104921523d28f4af",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"usuarios"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "673676e6104921523d28f4af"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD de contactos",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8000/usuarios/67367737104921523d28f4b1/contactos"
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/usuarios/673687588a6c02e35fbb5350/contactos?email=user3@example.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"usuarios",
+								"673687588a6c02e35fbb5350",
+								"contactos"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "user3@example.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/usuarios/673687588a6c02e35fbb5350/contactos?email=user2@example.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"usuarios",
+								"673687588a6c02e35fbb5350",
+								"contactos"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "user2@example.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD de eventos",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8000/eventos"
+					},
+					"response": []
+				},
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/eventos/getById?id=67368d62bcaa8cf1897e3a55",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"eventos",
+								"getById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "67368d62bcaa8cf1897e3a55"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"anfitrion\": \"user@example.com\",\r\n  \"descripcion\": \"fiesta 90 cumpleanyos\",\r\n  \"inicio\": \"2050-12-24\",\r\n  \"duracion\": 4,\r\n  \"invitados\": [\r\n    \"user2@example.com\",\r\n    \"user3@example.com\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8000/eventos"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"anfitrion\": \"user3@example.com\",\r\n  \"descripcion\": \"fiesta 80 cumpleanyos\",\r\n  \"inicio\": \"2024-11-14\",\r\n  \"duracion\":  5,\r\n  \"invitados\": [\r\n    \"user3@example.com\",\r\n    \"user2@example.com\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/eventos?id=6736902aea0f623aa4dbc52d",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"eventos"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6736902aea0f623aa4dbc52d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/eventos?id=6736902aea0f623aa4dbc52d",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"eventos"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6736902aea0f623aa4dbc52d"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Funciones Avanzadas",
+			"item": [
+				{
+					"name": "GET By Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/usuarios/user4@example.com/contactos/getByName?name=user",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"usuarios",
+								"user4@example.com",
+								"contactos",
+								"getByName"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "user"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "INVITE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/eventos/67368d12bcaa8cf1897e3a54/invitar?email=user4@example.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"eventos",
+								"67368d12bcaa8cf1897e3a54",
+								"invitar"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "user4@example.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CONFIRMAR",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/eventos/67368d12bcaa8cf1897e3a54/confirmar?email=user4@example.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"eventos",
+								"67368d12bcaa8cf1897e3a54",
+								"confirmar"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "user4@example.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POSTPONED",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/eventos/67368d12bcaa8cf1897e3a54/aplazar?date=2024-11-25",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"eventos",
+								"67368d12bcaa8cf1897e3a54",
+								"aplazar"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2024-11-25"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
