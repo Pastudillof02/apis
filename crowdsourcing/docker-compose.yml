@@ -1,0 +1,9 @@
+services:
+  usuario_service:
+    build: ./services/crowdsourcing_service
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+    volumes:
+      - ./services/crowdsourcing_service:/app
